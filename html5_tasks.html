@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Connect | Mumbai Local Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #fbbf24;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2 {
+            color: #1e40af;
+        }
+        
+        .task-header {
+            background: #e0f2fe;
+            padding: 1rem 1.5rem;
+            border-left: 6px solid #3b82f6;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        #welcomeBanner {
+            background: #1e40af;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .event-img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border: 3px solid #3b82f6;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .event-img:hover {
+            transform: scale(1.05);
+        }
+        
+        form {
+            display: grid;
+            gap: 1.2rem;
+            max-width: 600px;
+        }
+        
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #3b82f6;
+            outline: none;
+        }
+        
+        button {
+            background: #3b82f6;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+        
+        .output {
+            background: #ecfdf5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            min-height: 50px;
+        }
+        
+        video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+        }
+        
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+        
+        footer {
+            background: #1e2937;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Community Connect</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="help.html" target="_blank">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Task 1 -->
+        <div class="task-header">
+            <h2>Task 1: Create the HTML5 Base Template</h2>
+        </div>
+        <section id="home">
+            <!-- Task 3: Welcome Message -->
+            <div id="welcomeBanner">
+                <h1>Welcome to Mumbai Community Events Portal</h1>
+                <p>Dear <strong>Resident</strong>, join hands in making our city vibrant!</p>
+                <span style="color: #fbbf24; font-weight: bold; font-size: 1.3rem;">Special Offer: First event free for new users!</span>
+            </div>
+
+            <p>This document demonstrates all HTML5 concepts as per the project requirements.</p>
+        </section>
+
+        <!-- Task 2 -->
+        <div class="task-header">
+            <h2>Task 2: Navigation and Linking</h2>
+        </div>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Click on navigation links above to jump between sections.</p>
+        </section>
+
+        <!-- Task 4 -->
+        <div class="task-header">
+            <h2>Task 4: Image Gallery for Community Events</h2>
+        </div>
+        <section>
+            <h3>Past Community Events</h3>
+            <table>
+                <tr>
+                    <td>
+                        <img src="https://picsum.photos/id/1015/300/200" alt="Beach Cleanup Drive" title="Beach Cleanup Drive" class="event-img">
+                        <p><strong>Beach Cleanup</strong><br>Juhu Beach</p>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos/id/102/300/200" alt="Tree Plantation Drive" title="Tree Plantation Drive" class="event-img">
+                        <p><strong>Green Mumbai</strong><br>Aarey Colony</p>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos/id/201/300/200" alt="Cultural Festival" title="Cultural Festival" class="event-img">
+                        <p><strong>Ganesh Chaturthi</strong><br>Community Hall</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://picsum.photos/id/237/300/200" alt="Health Camp" title="Health Camp" class="event-img">
+                        <p><strong>Free Health Camp</strong><br>Dadar</p>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos/id/251/300/200" alt="Youth Marathon" title="Youth Marathon" class="event-img">
+                        <p><strong>Run for Mumbai</strong><br>Marine Drive</p>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos/id/870/300/200" alt="Senior Citizen Meet" title="Senior Citizen Meet" class="event-img">
+                        <p><strong>Elder Connect</strong><br>Bandra</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Task 5 -->
+        <div class="task-header">
+            <h2>Task 5: Event Registration Form</h2>
+        </div>
+        <section id="register">
+            <h3>Register for an Event</h3>
+            <form id="registrationForm">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required autofocus>
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
+                <div>
+                    <label for="date">Event Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div>
+                    <label for="eventType">Event Type:</label>
+                    <select id="eventType" required>
+                        <option value="">-- Select Event --</option>
+                        <option value="beach">Beach Cleanup</option>
+                        <option value="green">Tree Plantation</option>
+                        <option value="health">Health Camp</option>
+                        <option value="cultural">Cultural Festival</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">Additional Message:</label>
+                    <textarea id="message" rows="4" placeholder="Any special requests..."></textarea>
+                </div>
+                <button type="submit">Register Now</button>
+            </form>
+            <div id="confirmation" class="output"></div>
+        </section>
+
+        <!-- Task 6 -->
+        <div class="task-header">
+            <h2>Task 6: Event Feedback with Events Handling</h2>
+        </div>
+        <section id="feedback">
+            <h3>Share Your Feedback</h3>
+            
+            <div>
+                <label for="phone">Phone Number (for verification):</label>
+                <input type="tel" id="phone" placeholder="9876543210" onblur="validatePhone()">
+            </div>
+            
+            <div>
+                <label for="feeEvent">Select Event to see fee:</label>
+                <select id="feeEvent" onchange="showFee()">
+                    <option value="">-- Choose Event --</option>
+                    <option value="beach">Beach Cleanup - Free</option>
+                    <option value="green">Tree Plantation - ₹50</option>
+                    <option value="health">Health Camp - Free</option>
+                    <option value="marathon">Marathon - ₹200</option>
+                </select>
+            </div>
+            <p id="feeDisplay" style="font-weight:bold; color:#16a34a;"></p>
+            
+            <button onclick="submitFeedback()" style="margin: 15px 0;">Submit Feedback</button>
+            
+            <div>
+                <label for="feedbackText">Your Feedback:</label>
+                <textarea id="feedbackText" rows="5" placeholder="Write your experience here..." onkeyup="countChars()"></textarea>
+                <p id="charCount">Characters: 0 / 500</p>
+            </div>
+        </section>
+
+        <!-- Task 7 -->
+<div class="task-header">
+    <h2>Task 7: Video Invite with Media Events</h2>
+</div>
+<section>
+    <h3>Event Promo Video</h3>
+    <p><strong>Big Buck Bunny - Sample Promo Video</strong></p>
+    
+    <video id="promoVideo" controls width="100%" max-width="800px" oncanplay="videoReady()">
+        <!-- More reliable public test video -->
+        <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4" 
+                type="video/mp4">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
+                type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div id="videoStatus" class="status"></div>
+</section>
+        <!-- Task 8 -->
+        <div class="task-header">
+            <h2>Task 8: Saving User Preferences</h2>
+        </div>
+        <section>
+            <h3>Your Event Preferences</h3>
+            <button onclick="savePreference()">Save Current Preference</button>
+            <button onclick="clearPreferences()">Clear All Preferences</button>
+            <p id="prefStatus" style="margin-top: 15px; font-weight: 500;"></p>
+        </section>
+
+        <!-- Task 9 -->
+        <div class="task-header">
+            <h2>Task 9: Geolocation for Event Mapping</h2>
+        </div>
+        <section>
+            <h3>Find Events Near You</h3>
+            <button onclick="findNearbyEvents()">Find Nearby Events</button>
+            <div id="locationResult" style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px;"></div>
+        </section>
+
+        <!-- Task 10 -->
+        <div class="task-header">
+            <h2>Task 10: Debugging with Chrome DevTools</h2>
+        </div>
+        <section>
+            <p>Open Chrome DevTools (F12) → Console tab to see logs.</p>
+            <button onclick="debugTest()">Run Debug Test</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mumbai Community Council | All Rights Reserved</p>
+        <p>This page demonstrates all 10 HTML5 tasks in one integrated portal.</p>
+    </footer>
+
+    <script>
+        // Task 5: Form Submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            document.getElementById('confirmation').innerHTML = 
+                `<strong>✅ Registration Successful!</strong><br>Thank you, ${name}. You have been registered.`;
+        });
+
+        // Task 6: Event Handlers
+        function validatePhone() {
+            const phone = document.getElementById('phone').value;
+            if (phone.length < 10) {
+                alert("Phone number should be at least 10 digits.");
+            }
+        }
+
+        function showFee() {
+            const feeDisplay = document.getElementById('feeDisplay');
+            const selected = document.getElementById('feeEvent').value;
+            
+            if (selected.includes("Free")) {
+                feeDisplay.textContent = "Fee: Free";
+            } else if (selected.includes("₹")) {
+                feeDisplay.textContent = "Fee: " + selected.split("- ")[1];
+            }
+        }
+
+        function submitFeedback() {
+            alert("Thank you for your feedback! It has been recorded.");
+        }
+
+        function countChars() {
+            const text = document.getElementById('feedbackText').value;
+            document.getElementById('charCount').textContent = `Characters: ${text.length} / 500`;
+        }
+
+       // Task 7: Video
+function videoReady() {
+    const status = document.getElementById('videoStatus');
+    status.innerHTML = `
+        <span style="color:green; font-weight:bold;">
+            ✅ Video is ready to play!
+        </span>`;
+}
+
+        // Task 8: Local & Session Storage
+        function savePreference() {
+            const eventType = document.getElementById('eventType').value || "beach";
+            localStorage.setItem('preferredEvent', eventType);
+            sessionStorage.setItem('lastVisit', new Date().toLocaleString());
+            document.getElementById('prefStatus').innerHTML = 
+                `✅ Preference saved: <strong>${eventType}</strong>`;
+        }
+
+        // Load preference on page load
+        window.onload = function() {
+            const saved = localStorage.getItem('preferredEvent');
+            if (saved) {
+                const select = document.getElementById('eventType');
+                if (select) select.value = saved;
+                document.getElementById('prefStatus').innerHTML = 
+                    `Loaded saved preference: <strong>${saved}</strong>`;
+            }
+        };
+
+        function clearPreferences() {
+            localStorage.clear();
+            sessionStorage.clear();
+            document.getElementById('prefStatus').innerHTML = 
+                '🗑️ All preferences have been cleared.';
+        }
+
+        // Task 9: Geolocation
+        function findNearbyEvents() {
+            const resultDiv = document.getElementById('locationResult');
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        resultDiv.innerHTML = `
+                            <strong>📍 Your Location:</strong><br>
+                            Latitude: ${position.coords.latitude.toFixed(4)}<br>
+                            Longitude: ${position.coords.longitude.toFixed(4)}<br><br>
+                            <em>Nearby events in your area will be shown here (Demo).</em>
+                        `;
+                    },
+                    (error) => {
+                        let message = "Error: ";
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                message += "Location access denied by user.";
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                message += "Location information unavailable.";
+                                break;
+                            case error.TIMEOUT:
+                                message += "Request timed out.";
+                                break;
+                        }
+                        resultDiv.innerHTML = `<span style="color:red;">${message}</span>`;
+                    },
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+                );
+            } else {
+                resultDiv.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        // Task 10: Debug helper
+        function debugTest() {
+            console.log("%cDebug Test Started - HTML5 Project", "color: blue; font-size: 16px;");
+            console.log("Current Time:", new Date());
+            console.log("Local Storage Items:", Object.keys(localStorage));
+            
+            alert("Check Console (F12) for debug logs!");
+        }
+
+        // Before unload warning (Task 7)
+        window.onbeforeunload = function() {
+            return "You have unsaved changes. Do you really want to leave?";
+        };
+
+        console.log("✅ Mumbai Community Portal loaded successfully. All tasks implemented.");
+    </script>
+</body>
+</html>
