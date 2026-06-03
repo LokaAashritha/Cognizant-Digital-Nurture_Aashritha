@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Connect | Mumbai Local Events</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #333; }
+        header { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; }
+        
+        main { max-width: 1200px; margin: 2rem auto; padding: 0 20px; }
+        .task-header { 
+            background: #e0f2fe; padding: 1rem 1.5rem; 
+            border-left: 6px solid #3b82f6; margin: 2rem 0 1.5rem; 
+            border-radius: 0 8px 8px 0; 
+        }
+        section { 
+            margin-bottom: 3rem; padding: 2rem; background: white; 
+            border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        .event-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; 
+        }
+        .event-card { 
+            border: 2px solid #3b82f6; padding: 15px; border-radius: 10px; 
+            background: #f8fafc; 
+        }
+        .event-card h3 { color: #1e40af; margin-bottom: 10px; }
+        button { 
+            background: #3b82f6; color: white; padding: 10px 20px; 
+            border: none; border-radius: 8px; cursor: pointer; 
+        }
+        button:hover { background: #2563eb; }
+        .form-group { margin-bottom: 15px; }
+        input, select { width: 100%; padding: 10px; border: 2px solid #cbd5e1; border-radius: 6px; }
+        #status { padding: 12px; margin: 15px 0; border-radius: 6px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Community Connect</div>
+            <ul class="nav-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ====================== TASK 1 ====================== -->
+        <div class="task-header">
+            <h2>Task 1: JavaScript Basics & Setup</h2>
+        </div>
+        <section id="home">
+            <p>Check Console (F12) for "Welcome to the Community Portal"</p>
+        </section>
+
+        <!-- ====================== TASK 2 to 14 will be in sections below ====================== -->
+
+        <!-- ====================== TASK 3 & 6 & 7 ====================== -->
+        <div class="task-header">
+            <h2>Task 3, 6 & 7: Conditionals, Arrays, DOM Manipulation</h2>
+        </div>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div style="margin:15px 0;">
+                <label>Filter by Category: </label>
+                <select id="categoryFilter" onchange="filterEvents()">
+                    <option value="">All</option>
+                    <option value="Cleanup">Cleanup</option>
+                    <option value="Plantation">Plantation</option>
+                    <option value="Health">Health</option>
+                </select>
+            </div>
+            <div id="eventsContainer" class="event-grid"></div>
+        </section>
+
+        <!-- ====================== TASK 5 & 11 ====================== -->
+        <div class="task-header">
+            <h2>Task 5, 11: Objects & Working with Forms</h2>
+        </div>
+        <section id="register">
+            <h3>Event Registration Form</h3>
+            <form id="regForm">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="userName" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="userEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Select Event:</label>
+                    <select id="eventSelect"></select>
+                </div>
+                <button type="submit">Register Now</button>
+            </form>
+            <div id="status"></div>
+        </section>
+
+        <!-- ====================== TASK 8 ====================== -->
+        <div class="task-header">
+            <h2>Task 8: Event Handling</h2>
+        </div>
+        <section>
+            <button onclick="quickSearch()">Press me then type in search box (Task 8)</button>
+            <input type="text" id="searchInput" placeholder="Search event by name" onkeydown="if(event.key === 'Enter') searchEvent()">
+        </section>
+
+        <!-- ====================== TASK 9 & 12 ====================== -->
+        <div class="task-header">
+            <h2>Task 9 & 12: Async JS, Promises, Fetch API</h2>
+        </div>
+        <section>
+            <button onclick="loadMockEvents()">Load Events from Mock API (Async/Await)</button>
+            <div id="apiStatus"></div>
+        </section>
+
+        <!-- ====================== TASK 4 & 10 ====================== -->
+        <div class="task-header">
+            <h2>Task 4 & 10: Functions, Closures & Modern JS Features</h2>
+        </div>
+        <section>
+            <button onclick="trackRegistrations()">Track Total Registrations (Closure Demo)</button>
+            <p id="closureDemo"></p>
+        </section>
+
+        <!-- ====================== TASK 13 ====================== -->
+        <div class="task-header">
+            <h2>Task 13: Debugging and Testing</h2>
+        </div>
+        <section>
+            <button onclick="debugTest()">Run Debug Test (Check Console)</button>
+        </section>
+
+        <!-- ====================== TASK 14 ====================== -->
+        <div class="task-header">
+            <h2>Task 14: jQuery and JS Frameworks</h2>
+        </div>
+        <section>
+            <button id="jqueryBtn">jQuery Fade Effect</button>
+            <p id="jqueryDemo" style="display:none;">jQuery is used here for simple DOM animation.</p>
+            <p><strong>Note:</strong> Modern frameworks like React or Vue offer component-based architecture, state management, and better scalability.</p>
+        </section>
+
+    </main>
+
+    <footer style="background:#1e2937; color:white; text-align:center; padding:2rem;">
+        <p>&copy; 2026 Mumbai Community Council | JavaScript Tasks Demo</p>
+    </footer>
+
+    <script>
+        // ====================== TASK 1: Basics ======================
+        console.log("Welcome to the Community Portal");
+        window.onload = () => {
+            console.log("✅ Page fully loaded - Task 1 completed");
+        };
+
+        // ====================== TASK 2: Data Types & Operators ======================
+        const eventName = "Beach Cleanup Drive";
+        let availableSeats = 45;
+        const eventDate = "2026-06-15";
+
+        function showEventInfo() {
+            console.log(`Event: ${eventName} on ${eventDate} | Seats left: ${availableSeats--}`);
+        }
+
+        // ====================== TASK 3, 5, 6: Events Array & Objects ======================
+        let events = [
+            {
+                id: 1,
+                name: "Beach Cleanup Drive",
+                category: "Cleanup",
+                date: "2026-06-15",
+                location: "Juhu Beach",
+                seats: 45
+            },
+            {
+                id: 2,
+                name: "Tree Plantation Camp",
+                category: "Plantation",
+                date: "2026-06-22",
+                location: "Aarey Colony",
+                seats: 80
+            },
+            {
+                id: 3,
+                name: "Free Health Checkup",
+                category: "Health",
+                date: "2026-06-28",
+                location: "Dadar",
+                seats: 30
+            }
+        ];
+
+        // Task 5: Event Constructor
+        function Event(id, name, category, date, location, seats) {
+            this.id = id;
+            this.name = name;
+            this.category = category;
+            this.date = date;
+            this.location = location;
+            this.seats = seats;
+        }
+        Event.prototype.checkAvailability = function() {
+            return this.seats > 0;
+        };
+
+        // Render Events (Task 7)
+        function renderEvents(filteredEvents) {
+            const container = document.getElementById('eventsContainer');
+            container.innerHTML = '';
+            
+            filteredEvents.forEach(event => {
+                const card = document.createElement('div');
+                card.className = 'event-card';
+                card.innerHTML = `
+                    <h3>${event.name}</h3>
+                    <p><strong>Date:</strong> ${event.date}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
+                    <p><strong>Seats Left:</strong> ${event.seats}</p>
+                    <button onclick="registerForEvent(${event.id})">Register</button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Initial Render
+        renderEvents(events);
+
+        // ====================== TASK 8: Event Handling ======================
+        function filterEvents() {
+            const category = document.getElementById('categoryFilter').value;
+            const filtered = category ? events.filter(e => e.category === category) : events;
+            renderEvents(filtered);
+        }
+
+        function quickSearch() {
+            document.getElementById('searchInput').focus();
+        }
+
+        function searchEvent() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = events.filter(e => e.name.toLowerCase().includes(term));
+            renderEvents(filtered);
+        }
+
+        // ====================== TASK 11: Form Handling ======================
+        const regForm = document.getElementById('regForm');
+        regForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Task 11: preventDefault
+            
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+            const eventId = parseInt(document.getElementById('eventSelect').value);
+
+            if (!name || !email) {
+                showStatus("❌ Please fill all fields", "red");
+                return;
+            }
+
+            const selectedEvent = events.find(ev => ev.id === eventId);
+            if (selectedEvent && selectedEvent.seats > 0) {
+                selectedEvent.seats--;
+                showStatus(`✅ Registration successful for ${selectedEvent.name}!`, "green");
+                renderEvents(events); // Update UI
+            } else {
+                showStatus("❌ Event is full or not found", "red");
+            }
+        });
+
+        function showStatus(message, color) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.style.color = color;
+            statusDiv.textContent = message;
+        }
+
+        // Populate Event Select
+        function populateEventSelect() {
+            const select = document.getElementById('eventSelect');
+            events.forEach(event => {
+                const option = document.createElement('option');
+                option.value = event.id;
+                option.textContent = event.name;
+                select.appendChild(option);
+            });
+        }
+        populateEventSelect();
+
+        // ====================== TASK 4: Functions & Closure ======================
+        function createRegistrationTracker() {
+            let totalRegs = 0;
+            return function() {
+                totalRegs++;
+                document.getElementById('closureDemo').textContent = 
+                    `Total Registrations Across All Events: ${totalRegs}`;
+            };
+        }
+        const trackRegistrations = createRegistrationTracker();
+
+        // ====================== TASK 9 & 12: Async / Fetch ======================
+        async function loadMockEvents() {
+            const status = document.getElementById('apiStatus');
+            status.textContent = "Loading from mock API...";
+            
+            try {
+                // Mock API simulation
+                const response = await new Promise(resolve => {
+                    setTimeout(() => {
+                        resolve({
+                            json: () => Promise.resolve([
+                                { id: 4, name: "Music Night", category: "Cultural", seats: 60 }
+                            ])
+                        });
+                    }, 1500);
+                });
+                
+                const newEvents = await response.json();
+                events = [...events, ...newEvents];
+                renderEvents(events);
+                status.innerHTML = `<span style="color:green;">✅ Events loaded successfully using Async/Await!</span>`;
+            } catch (error) {
+                status.innerHTML = `<span style="color:red;">❌ Error: ${error.message}</span>`;
+            }
+        }
+
+        // Register function
+        function registerForEvent(id) {
+            const event = events.find(e => e.id === id);
+            if (event && event.seats > 0) {
+                event.seats--;
+                alert(`Successfully registered for ${event.name}`);
+                renderEvents(events);
+            }
+        }
+
+        // ====================== TASK 13: Debugging Helper ======================
+        function debugTest() {
+            console.log("%c=== DEBUG TEST STARTED ===", "color: blue; font-size: 16px;");
+            console.log("Events Array:", events);
+            console.log("Current Seats:", events.map(e => e.seats));
+            console.log("Form Data Test: Ready for inspection in DevTools");
+            alert("Check Console (F12) for debug logs!");
+        }
+
+        // ====================== TASK 14: jQuery Demo ======================
+        document.getElementById('jqueryBtn').addEventListener('click', function() {
+            const demo = document.getElementById('jqueryDemo');
+            demo.style.display = demo.style.display === 'none' ? 'block' : 'none';
+            console.log("jQuery .fadeIn() / .fadeOut() equivalent used here.");
+        });
+
+        console.log("%c✅ All JavaScript Tasks Loaded Successfully!", "color: green; font-size: 16px;");
+    </script>
+</body>
+</html>

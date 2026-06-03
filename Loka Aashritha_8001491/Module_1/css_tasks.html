@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Connect | Mumbai Local Events</title>
+    
+    <!-- Task 1: External Stylesheet Simulation -->
+    <link rel="stylesheet" href="styles.css"> <!-- In real project, use separate file -->
+
+    <style>
+        /* ==================== TASK 1 & 2: Embedded Styles ==================== */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .task-header {
+            background: #e0f2fe;
+            padding: 1rem 1.5rem;
+            border-left: 6px solid #3b82f6;
+            margin: 2rem 0 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Task 3: Selectors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #1e40af;
+        }
+
+        #mainHeader {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        .eventCard {
+            border: 2px solid #3b82f6;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="font-size: 1.8rem; font-weight: bold;">Community Connect</div>
+            <ul class="nav-links" style="display: flex; gap: 2rem; list-style: none;">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 1200px; margin: 2rem auto; padding: 0 20px;">
+
+        <!-- ====================== TASK 1 ====================== -->
+        <div class="task-header">
+            <h2>Task 1: Why CSS? Inline vs Internal vs External</h2>
+        </div>
+        <section id="home">
+            <!-- Inline Style Example -->
+            <h1 style="color: red; text-align: center;">Inline Style Applied Here (Task 1)</h1>
+            <p>Body background is set using Embedded &lt;style&gt; tag.</p>
+            <p>Reusable styles are in external stylesheet (simulated).</p>
+        </section>
+
+        <!-- ====================== TASK 2 ====================== -->
+        <div class="task-header">
+            <h2>Task 2: CSS Syntax and Comments</h2>
+        </div>
+        <section>
+            <button class="cta-button">Call to Action Button</button>
+        </section>
+
+        <!-- ====================== TASK 3 ====================== -->
+        <div class="task-header">
+            <h2>Task 3: Selectors Playground</h2>
+        </div>
+        <section>
+            <h2 id="mainHeader">Main Banner Header (ID Selector)</h2>
+            
+            <div class="eventCard">
+                <h3>Event Card Example</h3>
+                <p>This uses class selector .eventCard</p>
+            </div>
+        </section>
+
+        <!-- ====================== TASK 4 ====================== -->
+        <div class="task-header">
+            <h2>Task 4: Color & Background Styling</h2>
+        </div>
+        <section style="background: linear-gradient(135deg, #dbeafe, #bfdbfe); padding: 2rem;">
+            <h3 style="color: #1e40af;">Section with Gradient Background</h3>
+            <p>This section uses RGBA and HEX colors with gradient.</p>
+        </section>
+
+        <!-- ====================== TASK 5 ====================== -->
+        <div class="task-header">
+            <h2>Task 5: Typography: Fonts and Text</h2>
+        </div>
+        <section>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+            
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 1px;">
+                Beautiful Typography
+            </h3>
+            <p style="font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                This text demonstrates proper font styling, line height, and letter spacing for better readability.
+            </p>
+        </section>
+
+        <!-- ====================== TASK 6 ====================== -->
+        <div class="task-header">
+            <h2>Task 6: Link and List Styling</h2>
+        </div>
+        <section>
+            <ul style="list-style-type: none;">
+                <li><a href="#" style="color: #1e40af;">Event Guidelines</a></li>
+                <li><a href="#" style="color: #1e40af;">Volunteer Opportunities</a></li>
+            </ul>
+        </section>
+
+        <!-- ====================== TASK 7 ====================== -->
+        <div class="task-header">
+            <h2>Task 7: Table Styling</h2>
+        </div>
+        <section>
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <th style="background:#1e40af; color:white; padding:12px;">Event</th>
+                    <th style="background:#1e40af; color:white; padding:12px;">Date</th>
+                    <th style="background:#1e40af; color:white; padding:12px;">Location</th>
+                </tr>
+                <tr style="background:#f1f5f9;">
+                    <td style="padding:12px; border:1px solid #ddd;">Beach Cleanup</td>
+                    <td style="padding:12px; border:1px solid #ddd;">15 June</td>
+                    <td style="padding:12px; border:1px solid #ddd;">Juhu Beach</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid #ddd;">Tree Plantation</td>
+                    <td style="padding:12px; border:1px solid #ddd;">22 June</td>
+                    <td style="padding:12px; border:1px solid #ddd;">Aarey Colony</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ====================== TASK 8 ====================== -->
+        <div class="task-header">
+            <h2>Task 8: Box Model & Layout Control</h2>
+        </div>
+        <section>
+            <div class="eventCard" style="margin: 20px; padding: 25px; border: 4px solid #3b82f6; outline: 3px dashed #60a5fa;">
+                <strong>Box Model Demo:</strong> Margin, Padding, Border, Outline applied.
+            </div>
+            <button onclick="toggleVisibility()">Toggle visibility vs display</button>
+            <div id="demoBox" style="background:#fef3c7; padding:15px; margin-top:10px;">
+                This element can be hidden using visibility or display.
+            </div>
+        </section>
+
+        <!-- ====================== TASK 9 ====================== -->
+        <div class="task-header">
+            <h2>Task 9: Multiple Columns in Text</h2>
+        </div>
+        <section style="column-count: 2; column-gap: 40px; column-rule: 2px solid #94a3b8; padding: 20px;">
+            <h3>Community Bulletin</h3>
+            <p>Mumbai is organizing multiple green initiatives this month. Residents are encouraged to participate in beach cleanups, tree plantations, and health camps. Your small contribution makes a big difference in our city.</p>
+            <p>Together we can build a cleaner and greener Mumbai for future generations.</p>
+        </section>
+
+        <!-- ====================== TASK 10 ====================== -->
+        <div class="task-header">
+            <h2>Task 10: Responsive Web Design with Media Queries</h2>
+        </div>
+        <section>
+            <p><strong>Resize your browser window</strong> to see responsive behavior.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                <div class="eventCard" style="flex: 1; min-width: 280px;">Event Card 1</div>
+                <div class="eventCard" style="flex: 1; min-width: 280px;">Event Card 2</div>
+            </div>
+        </section>
+
+        <!-- ====================== TASK 11 ====================== -->
+        <div class="task-header">
+            <h2>Task 11: Debug and Test with Dev Tools</h2>
+        </div>
+        <section>
+            <p>Open Chrome DevTools (F12) → Toggle Device Toolbar → Test different screen sizes.</p>
+            <button onclick="alert('Check Console and Elements tab!')">Run Debug Test</button>
+        </section>
+
+    </main>
+
+    <footer style="background: #1e2937; color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
+        <p>&copy; 2026 Mumbai Community Council</p>
+    </footer>
+
+    <script>
+        function toggleVisibility() {
+            const box = document.getElementById('demoBox');
+            if (box.style.visibility === 'hidden') {
+                box.style.visibility = 'visible';
+                box.style.display = 'block';
+            } else {
+                box.style.visibility = 'hidden';
+                // Try display: none later using DevTools
+            }
+        }
+
+        console.log("%cCSS3 Tasks Completed Successfully!", "color: green; font-size: 16px;");
+    </script>
+</body>
+</html>
